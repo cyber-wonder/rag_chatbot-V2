@@ -1,0 +1,79 @@
+<mxfile host="Electron">
+  <diagram name="WhatsApp RAG Architecture" id="uzxrEopRXVhPCjpYFSB2">
+    <mxGraphModel dx="1585" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;" value="WhatsApp RAG Chatbot Architecture" vertex="1">
+          <mxGeometry height="30" width="400" x="500" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User&#xa;(WhatsApp)" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="WhatsApp" vertex="1">
+          <mxGeometry height="60" width="120" x="230" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Twilio Webhook&#xa;Media Download" vertex="1">
+          <mxGeometry height="70" width="160" x="420" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="FastAPI API&#xa;Upload Endpoint" vertex="1">
+          <mxGeometry height="70" width="170" x="660" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Document Loader&#xa;&amp; Parser" vertex="1">
+          <mxGeometry height="70" width="170" x="910" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Text Chunking" vertex="1">
+          <mxGeometry height="60" width="170" x="910" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Embedding Model" vertex="1">
+          <mxGeometry height="60" width="170" x="910" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-9" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="PostgreSQL&#xa;+ pgvector&#xa;&#xa;Chunks&#xa;Embeddings&#xa;Metadata" vertex="1">
+          <mxGeometry height="170" width="140" x="1180" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Notify User&#xa;Processing Complete" vertex="1">
+          <mxGeometry height="70" width="170" x="910" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Azure App Service&#xa;(Deployment)" vertex="1">
+          <mxGeometry height="70" width="180" x="660" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-12" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Azure Database&#xa;for PostgreSQL&#xa;(TBD)" vertex="1">
+          <mxGeometry height="80" width="160" x="980" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Tech Stack&#xa;&#xa;• FastAPI&#xa;• SQLAlchemy&#xa;• Alembic&#xa;• pgvector&#xa;• LangChain&#xa;• Pydantic Settings" vertex="1">
+          <mxGeometry height="180" width="240" x="60" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-14" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-2" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-15" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-3" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-16" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-4" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-5" value="Downloaded document">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-17" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-5" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-18" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-6" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-19" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-7" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-20" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-8" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-9" value="Store chunks + vectors">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-21" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-9" style="endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-22" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-10" style="dashed=1;endArrow=block;html=1;" target="aeZQlTyhnS3-8tsD3_l2-3" value="Processing complete">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aeZQlTyhnS3-8tsD3_l2-23" edge="1" parent="1" source="aeZQlTyhnS3-8tsD3_l2-11" style="dashed=1;endArrow=open;html=1;" target="aeZQlTyhnS3-8tsD3_l2-12" value="Connects to">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
